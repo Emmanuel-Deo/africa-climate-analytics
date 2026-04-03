@@ -1,5 +1,5 @@
 import './Footer.css'
-import acalogo from '../assets/acalogo.png'
+import footerLogo from '../assets/footerLogo.png'
 import { Link } from 'react-router-dom'
 
 function Footer() {
@@ -7,7 +7,7 @@ function Footer() {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-brand">
-          <img src={acalogo} alt="ACA Logo" className="footer-logo" />
+          <img src={footerLogo} alt="ACA Logo" className="footer-logo" />
           <p className="brand-description">
             Decision-grade climate analytics, evidence and advisory support for 
             African institutions and communities.

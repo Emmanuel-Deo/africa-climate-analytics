@@ -8,7 +8,6 @@ import {
   Search, 
   Users 
 } from 'lucide-react'
-import { Link } from 'react-router-dom'
 
 const pillars = [
   {
@@ -65,7 +64,6 @@ function Pillars() {
           </div>
           <h2 className="section-title">Seven pillars of climate action support</h2>
         </div>
-        <Link to="/our-work" className="view-all-btn">View all services</Link>
       </div>
 
       <div className="pillars-grid">
@@ -76,7 +74,6 @@ function Pillars() {
             </div>
             <h3 className="pillar-title">{pillar.title}</h3>
             <p className="pillar-desc">{pillar.desc}</p>
-            <div className="pillar-arrow">→</div>
           </div>
         ))}
       </div>

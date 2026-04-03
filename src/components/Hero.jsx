@@ -20,21 +20,21 @@ function Hero() {
           <button className="hero-btn-secondary">Partner with us</button>
         </div>
         <div className="hero-stats">
-          <div className="stat-item">
-            <span className="stat-number">54</span>
-            <span className="stat-label">Countries</span>
+          <div className="hero-stat-item">
+            <span className="hero-stat-number">54+</span>
+            <span className="hero-stat-label">Countries</span>
           </div>
-          <div className="stat-item">
-            <span className="stat-number">5</span>
-            <span className="stat-label">AU sub-regions</span>
+          <div className="hero-stat-item">
+            <span className="hero-stat-number">5</span>
+            <span className="hero-stat-label">AU sub-regions</span>
           </div>
-          <div className="stat-item">
-            <span className="stat-number">7</span>
-            <span className="stat-label">Service pillars</span>
+          <div className="hero-stat-item">
+            <span className="hero-stat-number">7</span>
+            <span className="hero-stat-label">Service pillars</span>
           </div>
-          <div className="stat-item">
-            <span className="stat-number">12+</span>
-            <span className="stat-label">Assignments</span>
+          <div className="hero-stat-item">
+            <span className="hero-stat-number">12+</span>
+            <span className="hero-stat-label">Assignments</span>
           </div>
         </div>
       </div>

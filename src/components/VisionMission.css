@@ -1,0 +1,68 @@
+.vision-mission {
+  padding: 6rem 80px;
+  background-color: #f5f7f9;
+}
+
+.vm-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.vm-card {
+  background: #ffffff;
+  padding: 3.5rem 3rem;
+  border-radius: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.vm-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.vm-icon-wrapper.blue {
+  background-color: #eef2ff;
+  color: #4338ca;
+}
+
+.vm-icon-wrapper.orange {
+  background-color: #fff7ed;
+  color: #9a3412;
+}
+
+.vm-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1e2d3d;
+  margin-bottom: 1.5rem;
+}
+
+.vm-desc {
+  font-size: 1.2rem;
+  color: #64748b;
+  line-height: 1.7;
+}
+
+@media (max-width: 1024px) {
+  .vm-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .vision-mission {
+    padding: 4rem 1.5rem;
+  }
+
+  .vm-card {
+    padding: 2.5rem 2rem;
+  }
+}

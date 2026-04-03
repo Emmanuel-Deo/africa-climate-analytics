@@ -1,0 +1,87 @@
+.stats-section {
+  background-color: #f4f7f9;
+  padding: 6rem 80px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+}
+
+.stats-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stat-item {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.divider {
+  position: absolute;
+  right: 0;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background-color: #e2e8f0;
+}
+
+.stat-number {
+  font-size: 5rem;
+  font-weight: 800;
+  color: #1e2d3d;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.orange-plus .suffix { color: #bc6c47; }
+.orange-num .num { color: #bc6c47; }
+.green-num .num { color: #5a8266; }
+
+.stat-label {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #94a3b8;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+  max-width: 150px;
+  line-height: 1.2;
+}
+
+.stat-subtext {
+  font-size: 1.1rem;
+  color: #4a6fa5;
+  font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+  .stats-section {
+    padding: 4rem 40px;
+  }
+
+  .stats-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem 0;
+  }
+  
+  .divider {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .stats-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .stat-number {
+    font-size: 4rem;
+  }
+}

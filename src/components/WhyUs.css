@@ -1,0 +1,124 @@
+.why-us {
+  background-color: #ebf0f4;
+  padding: 8rem 80px;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+}
+
+.why-us-header {
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.label {
+  color: #bc6c47;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.line {
+  width: 30px;
+  height: 2px;
+  background-color: #bc6c47;
+}
+
+.why-us-title {
+  font-size: 4rem;
+  color: #1e2d3d;
+  font-weight: 800;
+  margin-top: 1.5rem;
+}
+
+.strengths-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.strength-card {
+  background: #ffffff;
+  padding: 3rem 2rem;
+  border-radius: 24px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.strength-badge {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 2.5rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-top: 4px;
+}
+
+.dot.navy { background-color: #1e2d3d; }
+.dot.orange { background-color: #bc6c47; }
+.dot.green { background-color: #5a8266; }
+.dot.blue { background-color: #4a6fa5; }
+
+.badge-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #94a3b8;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+}
+
+.strength-title {
+  font-size: 1.5rem;
+  color: #1e2d3d;
+  font-weight: 800;
+  line-height: 1.3;
+  margin-bottom: 1.5rem;
+  min-height: 4rem;
+}
+
+.strength-desc {
+  font-size: 1.05rem;
+  color: #4a5568;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+@media (max-width: 1200px) {
+  .strengths-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .why-us-title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .why-us {
+    padding: 4rem 1.5rem;
+  }
+
+  .strengths-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-us-title {
+    font-size: 2.5rem;
+  }
+
+  .strength-title {
+    min-height: auto;
+  }
+}

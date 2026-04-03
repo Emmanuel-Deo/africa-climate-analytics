@@ -1,0 +1,148 @@
+.pillars-section {
+  background-color: #f8fafc;
+  padding: 6rem 80px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.pillars-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 4rem;
+}
+
+.header-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  color: #bc6c47;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.line {
+  display: inline-block;
+  width: 30px;
+  height: 2px;
+  background-color: #bc6c47;
+}
+
+.section-title {
+  font-size: 3.5rem;
+  color: #1e2d3d;
+  font-weight: 800;
+  max-width: 600px;
+  line-height: 1.1;
+}
+
+.view-all-btn {
+  display: inline-block;
+  background: white;
+  border: 1px solid #e2e8f0;
+  padding: 0.8rem 1.5rem;
+  border-radius: 12px;
+  color: #64748b;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.view-all-btn:hover {
+  background: #f1f5f9;
+}
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.pillar-card {
+  background: #ffffff;
+  padding: 2.5rem 2rem;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.pillar-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+.icon-wrapper {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.icon-wrapper.blue { background-color: #eef2ff; color: #4338ca; }
+.icon-wrapper.orange { background-color: #fff7ed; color: #9a3412; }
+.icon-wrapper.green { background-color: #f0fdf4; color: #166534; }
+.icon-wrapper.navy { background-color: #f1f5f9; color: #1e2d3d; }
+
+.pillar-title {
+  font-size: 1.25rem;
+  color: #1e2d3d;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+}
+
+.pillar-desc {
+  font-size: 1.05rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+.pillar-arrow {
+  color: #94a3b8;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .pillars-section {
+    padding: 4rem 40px;
+  }
+
+  .pillars-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .pillars-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .pillars-grid {
+    grid-template-columns: 1fr;
+  }
+}

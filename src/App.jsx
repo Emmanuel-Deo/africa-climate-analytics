@@ -4,6 +4,7 @@ import AboutUs from './pages/AboutUs'
 import OurWork from './pages/OurWork'
 import ContactUs from './pages/ContactUs'
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 import './App.css'
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/our-work" element={<OurWork />} />
         <Route path="/contact" element={<ContactUs />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   )
 }

@@ -92,6 +92,10 @@
 }
 
 @media (max-width: 1024px) {
+  .methodology {
+    padding: 4rem 40px;
+  }
+
   .method-steps {
     flex-direction: column;
     gap: 3rem;
@@ -104,10 +108,33 @@
 
 @media (max-width: 640px) {
   .methodology {
-    padding: 4rem 1.5rem;
+    padding: 3rem 1.5rem;
+  }
+
+  .method-header {
+    margin-bottom: 3rem;
   }
 
   .method-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
+  }
+
+  .method-step {
+    padding: 1.5rem 1rem;
+  }
+
+  .step-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1.5rem;
+  }
+
+  .step-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .step-desc {
+    font-size: 0.95rem;
   }
 }

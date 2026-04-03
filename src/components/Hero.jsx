@@ -1,7 +1,10 @@
+import { useNavigate } from 'react-router-dom'
 import './Hero.css'
 import heroMap from '../assets/heroMap.svg'
 
 function Hero() {
+  const navigate = useNavigate()
+
   return (
     <section className="hero">
       <div className="hero-content">
@@ -16,8 +19,8 @@ function Hero() {
           climate-resilient futures across the continent.
         </p>
         <div className="hero-buttons">
-          <button className="hero-btn-primary">Explore our work</button>
-          <button className="hero-btn-secondary">Partner with us</button>
+          <button className="hero-btn-primary" onClick={() => navigate('/our-work')}>Explore our work</button>
+          <button className="hero-btn-secondary" onClick={() => navigate('/contact')}>Partner with us</button>
         </div>
         <div className="hero-stats">
           <div className="hero-stat-item">

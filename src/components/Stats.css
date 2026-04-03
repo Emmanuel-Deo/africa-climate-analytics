@@ -68,20 +68,37 @@
   .stats-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 4rem 0;
+    gap: 3rem 2rem;
   }
   
   .divider {
     display: none;
   }
+
+  .stat-item {
+    padding: 1rem 0;
+  }
 }
 
 @media (max-width: 640px) {
+  .stats-section {
+    padding: 3rem 1.5rem;
+  }
+
   .stats-container {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
   
   .stat-number {
-    font-size: 4rem;
+    font-size: 3rem;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+  }
+
+  .stat-subtext {
+    font-size: 1rem;
   }
 }

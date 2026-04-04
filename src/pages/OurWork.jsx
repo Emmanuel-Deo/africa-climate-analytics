@@ -3,24 +3,28 @@ import ProjectCard from '../components/ProjectCard'
 
 const projects = [
   {
+    id: "continental-study",
     year: "2024–2025",
     title: "Continental Study on Human Mobility in the Context of Climate Change in Africa",
     client: "African Union Commission & IOM",
     description: "Comprehensive synthesis of climate-related migration, displacement, planned relocation and immobility across all five African sub-regions. Provided AU and IOM with an authoritative reference now used to inform continental strategies."
   },
   {
+    id: "climate-mobility-action-plan",
     year: "2025",
     title: "Climate-Mobility Action Plan & Roadmap 2026–2027",
     client: "IOM Special Liaison Office to the AU",
     description: "Strategic two-year action plan grounding IOM's support to AU, RECs and Member States on climate-mobility. Created practical reference for internal planning and resource mobilisation."
   },
   {
+    id: "global-gateway-flagship",
     year: "2025–2026",
     title: "AU–IOM–Team Europe Global Gateway Flagship",
     client: "AU Commission, IOM & EU",
     description: "Flagship concept linking climate-resilient urban and coastal investments with technical assistance on climate-mobility. Positioned AU and IOM with investment-grade flagship for Global Gateway framework."
   },
   {
+    id: "climate-adaptation-study",
     year: "2025",
     title: "Comprehensive Study on Climate Adaptation Interventions",
     client: "GHS & AU Commission (SEBE Directorate)",

@@ -27,7 +27,7 @@ function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <span>© 2025 Africa Climate Analytics</span>
+        <span>© 2026 Africa Climate Analytics</span>
       </div>
     </footer>
   )

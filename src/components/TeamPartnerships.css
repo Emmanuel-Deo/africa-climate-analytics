@@ -1,0 +1,168 @@
+.team-partnerships {
+  padding: 6rem 80px;
+  background-color: #f8fafc;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.tp-header {
+  margin-bottom: 3rem;
+}
+
+.tp-label {
+  color: #bc6c47;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1rem;
+}
+
+.tp-line {
+  display: inline-block;
+  width: 30px;
+  height: 2px;
+  background-color: #bc6c47;
+}
+
+.tp-title {
+  font-size: 3rem;
+  color: #1e2d3d;
+  font-weight: 800;
+}
+
+.tp-section-title {
+  font-size: 1.25rem;
+  color: #1e2d3d;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.tp-capabilities {
+  margin-bottom: 3rem;
+}
+
+.tp-capabilities-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.tp-capability-card {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tp-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.tp-icon.blue { background-color: #eef2ff; color: #4338ca; }
+.tp-icon.orange { background-color: #fff7ed; color: #9a3412; }
+.tp-icon.green { background-color: #f0fdf4; color: #166534; }
+.tp-icon.navy { background-color: #f1f5f9; color: #1e2d3d; }
+
+.tp-capability-card h4 {
+  font-size: 1rem;
+  color: #1e2d3d;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.tp-capability-card p {
+  font-size: 0.85rem;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.tp-partnerships {
+  margin-bottom: 3rem;
+}
+
+.tp-ways-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.tp-way-card {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 16px;
+}
+
+.tp-way-card h4 {
+  font-size: 1rem;
+  color: #1e2d3d;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.tp-way-card p {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.tp-collab-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.tp-collab-tag {
+  background: #ffffff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  color: #1e2d3d;
+  border: 1px solid #e2e8f0;
+}
+
+@media (max-width: 1024px) {
+  .team-partnerships {
+    padding: 4rem 40px;
+  }
+
+  .tp-title {
+    font-size: 2.25rem;
+  }
+
+  .tp-capabilities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tp-ways-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .team-partnerships {
+    padding: 3rem 1.5rem;
+  }
+
+  .tp-title {
+    font-size: 1.75rem;
+  }
+
+  .tp-capabilities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tp-collab-list {
+    flex-direction: column;
+  }
+}

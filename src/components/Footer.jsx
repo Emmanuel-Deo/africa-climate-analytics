@@ -13,6 +13,9 @@ function Footer() {
             African institutions and communities.
           </p>
           <p className="location-tag">Nairobi, Kenya</p>
+          <a href="mailto:info@africaclimateanalytics.org" className="footer-email">
+            info@africaclimateanalytics.org
+          </a>
         </div>
 
         <div className="footer-nav">

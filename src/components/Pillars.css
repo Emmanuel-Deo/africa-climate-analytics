@@ -108,13 +108,14 @@
   font-size: 1.05rem;
   color: #64748b;
   line-height: 1.6;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   flex-grow: 1;
 }
 
-.pillar-arrow {
+.pillar-details {
+  font-size: 0.9rem;
   color: #94a3b8;
-  font-size: 1.5rem;
+  line-height: 1.5;
 }
 
 @media (max-width: 1024px) {

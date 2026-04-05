@@ -2,12 +2,18 @@ import './Footer.css'
 import footerLogo from '../assets/footerLogo.png'
 import { Link } from 'react-router-dom'
 
+function scrollToTop() {
+  window.scrollTo(0, 0)
+}
+
 function Footer() {
   return (
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-brand">
-          <img src={footerLogo} alt="ACA Logo" className="footer-logo" />
+          <Link to="/" onClick={scrollToTop}>
+            <img src={footerLogo} alt="ACA Logo" className="footer-logo" />
+          </Link>
           <p className="brand-description">
             Decision-grade climate analytics, evidence and advisory support for 
             African institutions and communities.
@@ -19,10 +25,10 @@ function Footer() {
         </div>
 
         <div className="footer-nav">
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/our-work">Our Work</Link>
-          <Link to="/contact">Contact</Link>
+          <Link to="/" onClick={scrollToTop}>Home</Link>
+          <Link to="/about" onClick={scrollToTop}>About</Link>
+          <Link to="/our-work" onClick={scrollToTop}>Our Work</Link>
+          <Link to="/contact" onClick={scrollToTop}>Contact</Link>
         </div>
       </div>
 

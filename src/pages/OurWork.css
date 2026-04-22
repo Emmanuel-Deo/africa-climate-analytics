@@ -5,7 +5,7 @@
 
 /* Experience Hero Section */
 .ow-experience-hero {
-  padding: 5rem 80px 3rem;
+  padding: 5rem 80px;
   background-color: #f5f7f9;
   text-align: center;
 }
@@ -49,7 +49,7 @@
 
 /* Projects Section */
 .ow-projects {
-  padding: 4rem 80px 5rem;
+  padding: 5rem 80px;
   background-color: #ffffff;
 }
 

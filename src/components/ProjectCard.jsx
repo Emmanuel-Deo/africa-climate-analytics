@@ -5,7 +5,7 @@ function ProjectCard({ project }) {
   return (
     <div className="project-card">
       <div className="project-image">
-        <span>Project image placeholder</span>
+        {project.image && <img src={project.image} alt={project.title} />}
       </div>
       <div className="project-content">
         <span className="project-year">{project.year}</span>

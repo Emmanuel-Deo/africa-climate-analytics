@@ -1,4 +1,5 @@
 import './AboutHero.css'
+import landscapeImg from '../assets/Africa landscape.jpg'
 
 function AboutHero() {
   return (
@@ -10,7 +11,7 @@ function AboutHero() {
         <p className="about-hero-subtitle">
           Africa Climate Analytics is an Africa-based climate analytics and evidence organization established as a company limited by guarantee and incorporated in Kenya. We generate and translate climate-related data, analysis and evidence into decision-ready insights for African public institutions, regional bodies and civil-society organizations.
         </p>
-        
+
         <div className="about-hero-details">
           <div className="detail-item">
             <span className="detail-label">Legal Form</span>
@@ -23,9 +24,15 @@ function AboutHero() {
         </div>
       </div>
       <div className="about-hero-image">
-        <div className="image-placeholder">
-          <span>African landscape / Professional meeting image</span>
-        </div>
+        <figure className="about-hero-figure">
+          <img
+            src={landscapeImg}
+            alt="A herd of elephants at a watering hole with Mount Kenya in the background, Laikipia"
+          />
+          <figcaption>
+            Laikipia, Kenya &mdash; Photo by Leon Pauleikhoff
+          </figcaption>
+        </figure>
       </div>
     </section>
   )

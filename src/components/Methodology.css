@@ -1,18 +1,21 @@
 .methodology {
-  padding: 6rem 80px;
+  padding: 6rem 0;
+  width: 100%;
   background-color: #ffffff;
   text-align: center;
 }
 
 .method-header {
   margin-bottom: 5rem;
+  padding: 0 80px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .method-label {
-  color: #bc6c47;
+  color: #C68E1A;
   font-weight: 700;
   font-size: 0.9rem;
   letter-spacing: 0.1em;
@@ -25,13 +28,20 @@
 .method-line {
   width: 30px;
   height: 2px;
-  background-color: #bc6c47;
+  background-color: #C68E1A;
 }
 
 .method-title {
-  font-size: 3.5rem;
-  color: #1e2d3d;
+  font-size: 3rem;
+  color: #16191C;
   font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.method-subtitle {
+  font-size: 1.1rem;
+  color: #64748b;
+  max-width: 550px;
 }
 
 .method-steps {
@@ -40,6 +50,8 @@
   gap: 1rem;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 80px;
+  box-sizing: border-box;
 }
 
 .method-step {
@@ -62,7 +74,7 @@
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #5a8266 0%, #2d4f6b 100%);
+  background: linear-gradient(135deg, #4C8C2E 0%, #0B5E39 100%);
   color: #ffffff;
   display: flex;
   align-items: center;
@@ -73,7 +85,7 @@
 .step-title {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #1e2d3d;
+  color: #16191C;
   margin-bottom: 1rem;
 }
 
@@ -93,7 +105,13 @@
 
 @media (max-width: 1024px) {
   .methodology {
-    padding: 4rem 40px;
+    padding: 4rem 0;
+  }
+
+  .method-header,
+  .method-steps {
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   .method-steps {
@@ -108,7 +126,13 @@
 
 @media (max-width: 640px) {
   .methodology {
-    padding: 3rem 1.5rem;
+    padding: 3rem 0;
+  }
+
+  .method-header,
+  .method-steps {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   .method-header {

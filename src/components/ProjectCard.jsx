@@ -12,7 +12,7 @@ function ProjectCard({ project }) {
         <h3 className="project-title">{project.title}</h3>
         <p className="project-client">{project.client}</p>
         <p className="project-desc">{project.description}</p>
-        <Link to={`/our-work/${project.id}`} className="project-link">View details →</Link>
+        <Link to={`/assignments-impact/${project.id}`} className="project-link">View details →</Link>
       </div>
     </div>
   )

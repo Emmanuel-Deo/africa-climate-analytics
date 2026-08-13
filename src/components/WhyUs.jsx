@@ -35,6 +35,9 @@ function WhyUs() {
           <span className="line"></span> WHY AFRICA CLIMATE ANALYTICS
         </div>
         <h2 className="why-us-title">What makes us different</h2>
+        <p className="why-us-intro">
+          We are distinguished by four core strengths that shape how we work.
+        </p>
       </div>
 
       <div className="strengths-grid">

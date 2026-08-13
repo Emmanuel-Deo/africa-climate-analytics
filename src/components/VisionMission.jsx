@@ -11,7 +11,10 @@ function VisionMission() {
           </div>
           <h3 className="vm-title">Our Vision</h3>
           <p className="vm-desc">
-            An Africa where every public policy and investment is informed by robust climate intelligence, enabling communities to thrive.
+            Africa Climate Analytics envisions an Africa where every public policy,
+            investment decision and programme — whether led by governments, regional
+            bodies or civil society — is informed by robust climate intelligence,
+            enabling institutions and communities to thrive in a changing climate.
           </p>
         </div>
 
@@ -21,7 +24,11 @@ function VisionMission() {
           </div>
           <h3 className="vm-title">Our Mission</h3>
           <p className="vm-desc">
-            To equip public institutions, regional bodies, and civil society with the evidence and advisory support needed to design resilient, just, and low-emission pathways.
+            Our mission is to equip public institutions, regional bodies, non-profits
+            and civil-society organisations, and private-sector actors in Africa with
+            decision-grade climate analytics, evidence and advisory support, so they
+            can design and implement climate-resilient policies, programmes and
+            investments that are grounded in local realities and global best practice.
           </p>
         </div>
       </div>

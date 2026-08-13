@@ -1,8 +1,17 @@
 .solution-suites {
-  padding: 6rem 80px;
+  padding: 6rem 0;
+  width: 100%;
   background-color: #f8fafc;
-  max-width: 1600px;
-  margin: 0 auto;
+}
+
+.ss-header,
+.ss-grid {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 80px;
+  padding-right: 80px;
+  box-sizing: border-box;
 }
 
 .ss-header {
@@ -11,7 +20,7 @@
 }
 
 .ss-label {
-  color: #bc6c47;
+  color: #C68E1A;
   font-weight: 700;
   font-size: 0.85rem;
   letter-spacing: 0.1em;
@@ -26,12 +35,12 @@
   display: inline-block;
   width: 28px;
   height: 2px;
-  background-color: #bc6c47;
+  background-color: #C68E1A;
 }
 
 .ss-title {
   font-size: 2.75rem;
-  color: #1e2d3d;
+  color: #16191C;
   font-weight: 800;
   margin-bottom: 0.75rem;
 }
@@ -63,19 +72,19 @@
 }
 
 .ss-card.blue {
-  border-left-color: #2d4f6b;
+  border-left-color: #0B5E39;
 }
 
 .ss-card.orange {
-  border-left-color: #bc6c47;
+  border-left-color: #C68E1A;
 }
 
 .ss-card.green {
-  border-left-color: #5a8266;
+  border-left-color: #4C8C2E;
 }
 
 .ss-card.navy {
-  border-left-color: #1e2d3d;
+  border-left-color: #16191C;
 }
 
 .ss-card-header {
@@ -103,16 +112,23 @@
   justify-content: center;
 }
 
-.blue .ss-icon { background: #eef2ff; color: #2d4f6b; }
-.orange .ss-icon { background: #fff7ed; color: #bc6c47; }
-.green .ss-icon { background: #f0fdf4; color: #5a8266; }
-.navy .ss-icon { background: #f1f5f9; color: #1e2d3d; }
+.blue .ss-icon { background: #eef2ff; color: #0B5E39; }
+.orange .ss-icon { background: #fff7ed; color: #C68E1A; }
+.green .ss-icon { background: #f0fdf4; color: #4C8C2E; }
+.navy .ss-icon { background: #f1f5f9; color: #16191C; }
 
 .ss-card-title {
   font-size: 1.25rem;
-  color: #1e2d3d;
+  color: #16191C;
   font-weight: 700;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.4rem;
+}
+
+.ss-card-audience {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  font-style: italic;
+  margin-bottom: 0.75rem;
 }
 
 .ss-card-desc {
@@ -141,13 +157,19 @@
 }
 
 .ss-arrow {
-  color: #bc6c47;
+  color: #C68E1A;
   flex-shrink: 0;
 }
 
 @media (max-width: 1024px) {
   .solution-suites {
-    padding: 4rem 40px;
+    padding: 4rem 0;
+  }
+
+  .ss-header,
+  .ss-grid {
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   .ss-title {
@@ -161,7 +183,13 @@
 
 @media (max-width: 640px) {
   .solution-suites {
-    padding: 3rem 1.5rem;
+    padding: 3rem 0;
+  }
+
+  .ss-header,
+  .ss-grid {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   .ss-title {

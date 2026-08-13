@@ -1,23 +1,28 @@
 import './WhoWeServe.css'
+import { Link } from 'react-router-dom'
+import { ArrowRight } from 'lucide-react'
 
 const clients = [
   {
     id: "01",
-    title: "African governments & regional bodies",
-    desc: "National and sub-national governments, RECs and specialised regional organisations that lead climate-relevant policy, planning and investment.",
-    tags: ["Ministries", "City authorities", "RECs", "River basin orgs"]
+    title: "Governments and regional bodies",
+    desc: "We support African national and sub-national governments, regional economic communities and specialised regional organisations to integrate climate risk and resilience into policies, plans, public investments and institutional arrangements.",
+    anchor: "governments-regional-bodies",
+    button: "For governments & RECs"
   },
   {
     id: "02",
-    title: "Non-profits & civil society organisations",
-    desc: "Local NGOs, community-based organisations, social movements and international NGOs designing, implementing and advocating for climate programmes.",
-    tags: ["Local NGOs", "CBOs", "INGOs", "Coalitions"]
+    title: "Non-profits and civil society",
+    desc: "We work with local NGOs, community-based organisations, social movements and international NGOs that design, implement and advocate for climate-related programmes and policies, helping them build climate-sensitive monitoring, evaluation and learning systems.",
+    anchor: "non-profits-civil-society",
+    button: "For non-profits & civil society"
   },
   {
     id: "03",
-    title: "Financial institutions & private-sector actors",
-    desc: "Development finance institutions, banks, insurers, impact investors and corporates in climate-sensitive sectors needing ESG and risk analytics.",
-    tags: ["DFIs", "Banks", "Insurers", "Impact investors"]
+    title: "Financial institutions and private-sector actors",
+    desc: "We partner with development finance institutions, commercial banks, insurers and corporates in climate-sensitive sectors to assess climate risks, identify resilient investment opportunities and develop climate-aligned ESG metrics and disclosure tools.",
+    anchor: "financial-institutions-private-sector",
+    button: "For finance & private sector"
   }
 ]
 
@@ -26,15 +31,13 @@ function WhoWeServe() {
     <section className="serve-section">
       <div className="serve-header">
         <div className="header-left">
-          <div className="serve-label">
-            <span className="serve-line"></span> WHO WE SERVE
-          </div>
-          <h2 className="serve-title">Three client families, one shared mission</h2>
+          <div className="serve-label">WHO WE SERVE</div>
+          <h2 className="serve-title">Institutions that shape climate-relevant decisions</h2>
         </div>
         <div className="header-right">
           <p className="serve-subtitle">
-            We co-define the questions that matter most, apply rigorous 
-            analytics, and translate findings into decisions and actions.
+            We work with institutions that shape climate-relevant decisions,
+            investments and programmes across Africa.
           </p>
         </div>
       </div>
@@ -45,11 +48,9 @@ function WhoWeServe() {
             <span className="card-number">{client.id}</span>
             <h3 className="card-title">{client.title}</h3>
             <p className="card-desc">{client.desc}</p>
-            <div className="card-tags">
-              {client.tags.map(tag => (
-                <span key={tag} className="tag">{tag}</span>
-              ))}
-            </div>
+            <Link to={`/who-we-serve#${client.anchor}`} className="serve-card-link">
+              {client.button} <ArrowRight size={16} />
+            </Link>
           </div>
         ))}
       </div>

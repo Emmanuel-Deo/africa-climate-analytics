@@ -1,41 +1,50 @@
 import './Methodology.css'
-import { MessageCircle, BarChart3, Wrench, RefreshCw } from 'lucide-react'
+import { MessageCircle, Search, BarChart3, Wrench, RefreshCw } from 'lucide-react'
 
 const steps = [
   {
     number: "01",
-    title: "Co-Framing",
-    desc: "We begin every project by co-defining the question with our partners to ensure relevance.",
-    icon: <MessageCircle size={32} />
+    title: "Co-Framing the Problem",
+    desc: "We begin by working with our partners to clarify the decisions they need to make and the questions they need answered — through scoping consultations, document review and joint definition of objectives, users and timelines.",
+    icon: <MessageCircle size={30} />
   },
   {
     number: "02",
-    title: "Rigorous Analytics",
-    desc: "Applying mixed-methods (quantitative and qualitative) and peer-reviewed science.",
-    icon: <BarChart3 size={32} />
+    title: "Data Discovery & Context Analysis",
+    desc: "We identify and consolidate relevant climate, socio-economic, sectoral and programme data, while analysing institutional, policy and political-economy context so our analytics speak to real constraints.",
+    icon: <Search size={30} />
   },
   {
     number: "03",
-    title: "Usable Outputs",
-    desc: "Designing tools (dashboards, scorecards) that embed directly into existing workflows.",
-    icon: <Wrench size={32} />
+    title: "Analytics & Modelling",
+    desc: "Using appropriate tools and methods, we generate the analyses needed to answer the agreed questions — from descriptive statistics to scenario analysis and predictive models — prioritising transparency and reproducibility.",
+    icon: <BarChart3 size={30} />
   },
   {
     number: "04",
-    title: "Learning Loops",
-    desc: "Integrating capacity strengthening so teams can sustain the analytics themselves.",
-    icon: <RefreshCw size={32} />
+    title: "Co-Creation of Options & Tools",
+    desc: "We work with government, regional and civil-society partners to interpret findings, explore trade-offs and co-develop practical options and usable tools.",
+    icon: <Wrench size={30} />
+  },
+  {
+    number: "05",
+    title: "Capacity Building & Learning Loops",
+    desc: "We embed capacity strengthening throughout our work and build in learning loops — opportunities to reflect on what is working, adjust approaches and capture insights for wider use.",
+    icon: <RefreshCw size={30} />
   }
 ]
 
 function Methodology() {
   return (
-    <section className="methodology">
+    <section id="our-approach" className="methodology">
       <div className="method-header">
         <div className="method-label">
-          <span className="method-line"></span> OUR METHODOLOGY
+          <span className="method-line"></span> OUR METHODOLOGY AND APPROACH
         </div>
-        <h2 className="method-title">How we handle every assignment</h2>
+        <h2 className="method-title">A structured yet flexible approach</h2>
+        <p className="method-subtitle">
+          Demand-driven, locally grounded and decision-oriented, from problem to results.
+        </p>
       </div>
 
       <div className="method-steps">

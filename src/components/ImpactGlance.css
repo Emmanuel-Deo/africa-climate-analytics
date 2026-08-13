@@ -1,0 +1,65 @@
+.impact-glance {
+  background-color: #14261C;
+  padding: 4rem 80px;
+}
+
+.ig-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.ig-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  padding-left: 2rem;
+}
+
+.ig-item:first-child {
+  border-left: none;
+  padding-left: 0;
+}
+
+.ig-number {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.ig-label {
+  font-size: 0.9rem;
+  color: #a0aec0;
+  line-height: 1.4;
+}
+
+@media (max-width: 1024px) {
+  .impact-glance {
+    padding: 3rem 40px;
+  }
+
+  .ig-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+
+  .ig-item {
+    border-left: none;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .impact-glance {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .ig-number {
+    font-size: 2.25rem;
+  }
+}

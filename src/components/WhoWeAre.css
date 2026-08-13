@@ -1,0 +1,51 @@
+.who-we-are {
+  padding: 4.5rem 0;
+  width: 100%;
+}
+
+.wwa-container {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 0 40px;
+  text-align: center;
+}
+
+.wwa-text {
+  font-size: 1.35rem;
+  color: #364356;
+  line-height: 1.65;
+  margin-bottom: 1.5rem;
+}
+
+.wwa-link {
+  display: block;
+  text-align: right;
+  color: #C68E1A;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.05rem;
+}
+
+.wwa-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+  .who-we-are {
+    padding: 3.5rem 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .who-we-are {
+    padding: 3rem 0;
+  }
+
+  .wwa-container {
+    padding: 0 1.5rem;
+  }
+
+  .wwa-text {
+    font-size: 1.1rem;
+  }
+}

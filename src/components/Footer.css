@@ -1,5 +1,5 @@
 .footer {
-  background-color: #243645;
+  background-color: #14261C;
   color: #a0aec0;
   padding: 4rem 80px 2rem;
 }
@@ -10,17 +10,19 @@
   align-items: flex-start;
   max-width: 1600px;
   margin: 0 auto;
-  gap: 4rem;
+  gap: 3rem;
 }
 
 .footer-brand {
-  max-width: 350px;
+  max-width: 320px;
+  flex-shrink: 0;
 }
 
 .footer-logo {
   height: 56px;
   width: auto;
   margin-bottom: 1.5rem;
+  filter: brightness(0) invert(1);
 }
 
 .brand-description {
@@ -49,19 +51,37 @@
   opacity: 1;
 }
 
-.footer-nav {
-  display: flex;
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 2.5rem;
+  flex-grow: 1;
 }
 
-.footer-nav a {
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-col h4 {
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.footer-col a {
   color: #a0aec0;
   text-decoration: none;
-  font-size: 1.05rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
   transition: color 0.2s;
 }
 
-.footer-nav a:hover {
+.footer-col a:hover {
   color: #ffffff;
 }
 
@@ -84,11 +104,17 @@
 
   .footer-container {
     flex-direction: column;
-    gap: 2rem;
+    gap: 2.5rem;
   }
 
   .footer-brand {
     max-width: 100%;
+  }
+
+  .footer-columns {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    width: 100%;
   }
 }
 
@@ -97,14 +123,13 @@
     padding: 2.5rem 1.5rem 1.5rem;
   }
 
-  .footer-nav {
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
+  .footer-columns {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.75rem;
   }
 
-  .footer-nav a {
-    font-size: 0.95rem;
+  .footer-col a {
+    font-size: 0.9rem;
   }
 
   .footer-logo {

@@ -1,8 +1,18 @@
 .team-partnerships {
-  padding: 6rem 80px;
+  padding: 6rem 0;
+  width: 100%;
   background-color: #f8fafc;
-  max-width: 1600px;
-  margin: 0 auto;
+}
+
+.tp-header,
+.tp-capabilities,
+.tp-principles {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 80px;
+  padding-right: 80px;
+  box-sizing: border-box;
 }
 
 .tp-header {
@@ -10,7 +20,7 @@
 }
 
 .tp-label {
-  color: #bc6c47;
+  color: #C68E1A;
   font-weight: 700;
   font-size: 0.9rem;
   letter-spacing: 0.1em;
@@ -24,29 +34,37 @@
   display: inline-block;
   width: 30px;
   height: 2px;
-  background-color: #bc6c47;
+  background-color: #C68E1A;
 }
 
 .tp-title {
   font-size: 3rem;
-  color: #1e2d3d;
+  color: #16191C;
   font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.tp-subtitle {
+  font-size: 1.1rem;
+  color: #64748b;
+  line-height: 1.6;
+  max-width: 700px;
 }
 
 .tp-section-title {
   font-size: 1.25rem;
-  color: #1e2d3d;
+  color: #16191C;
   font-weight: 700;
   margin-bottom: 1.5rem;
 }
 
 .tp-capabilities {
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
 }
 
 .tp-capabilities-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 1.5rem;
 }
 
@@ -59,8 +77,8 @@
 }
 
 .tp-icon {
-  width: 48px;
-  height: 48px;
+  width: 44px;
+  height: 44px;
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -71,68 +89,32 @@
 .tp-icon.blue { background-color: #eef2ff; color: #4338ca; }
 .tp-icon.orange { background-color: #fff7ed; color: #9a3412; }
 .tp-icon.green { background-color: #f0fdf4; color: #166534; }
-.tp-icon.navy { background-color: #f1f5f9; color: #1e2d3d; }
+.tp-icon.navy { background-color: #f1f5f9; color: #16191C; }
 
 .tp-capability-card h4 {
-  font-size: 1rem;
-  color: #1e2d3d;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-}
-
-.tp-capability-card p {
-  font-size: 0.85rem;
-  color: #64748b;
-  line-height: 1.5;
-}
-
-.tp-partnerships {
-  margin-bottom: 3rem;
-}
-
-.tp-ways-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
-
-.tp-way-card {
-  background: #ffffff;
-  padding: 1.5rem;
-  border-radius: 16px;
-}
-
-.tp-way-card h4 {
-  font-size: 1rem;
-  color: #1e2d3d;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-}
-
-.tp-way-card p {
-  font-size: 0.9rem;
-  color: #64748b;
-  line-height: 1.5;
-}
-
-.tp-collab-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.tp-collab-tag {
-  background: #ffffff;
-  padding: 0.75rem 1.25rem;
-  border-radius: 30px;
   font-size: 0.95rem;
-  color: #1e2d3d;
-  border: 1px solid #e2e8f0;
+  color: #16191C;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.tp-principles {
+  font-size: 1.05rem;
+  color: #4a5568;
+  line-height: 1.65;
+  max-width: 800px;
 }
 
 @media (max-width: 1024px) {
   .team-partnerships {
-    padding: 4rem 40px;
+    padding: 4rem 0;
+  }
+
+  .tp-header,
+  .tp-capabilities,
+  .tp-principles {
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   .tp-title {
@@ -140,17 +122,20 @@
   }
 
   .tp-capabilities-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .tp-ways-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (max-width: 640px) {
   .team-partnerships {
-    padding: 3rem 1.5rem;
+    padding: 3rem 0;
+  }
+
+  .tp-header,
+  .tp-capabilities,
+  .tp-principles {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   .tp-title {
@@ -158,10 +143,6 @@
   }
 
   .tp-capabilities-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .tp-collab-list {
-    flex-direction: column;
+    grid-template-columns: 1fr 1fr;
   }
 }

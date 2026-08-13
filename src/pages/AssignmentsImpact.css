@@ -1,0 +1,88 @@
+.assignments-impact {
+  width: 100%;
+}
+
+.ai-filters-section {
+  padding: 3rem 80px 1rem;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.ai-filter-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+
+.ai-filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.ai-filter-btn {
+  background: #f1f5f9;
+  border: 1px solid transparent;
+  color: #4a5568;
+  padding: 0.5rem 1rem;
+  border-radius: 100px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.ai-filter-btn:hover {
+  background: #e2e8f0;
+}
+
+.ai-filter-btn.active {
+  background: #0B5E39;
+  color: #ffffff;
+}
+
+.ai-projects {
+  padding: 3rem 80px 5rem;
+  background-color: #ffffff;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.ai-empty {
+  text-align: center;
+  color: #94a3b8;
+  font-size: 1.1rem;
+  padding: 3rem 0;
+}
+
+@media (max-width: 1024px) {
+  .ai-filters-section,
+  .ai-projects {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .ai-filters-section,
+  .ai-projects {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}

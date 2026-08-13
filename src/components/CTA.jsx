@@ -16,8 +16,8 @@ function CTA() {
         </div>
         
         <div className="cta-buttons">
-          <Link to="/contact" className="btn-outline">Start a conversation</Link>
-          <Link to="/our-work" className="btn-outline">View our solutions</Link>
+          <Link to="/contact?interest=rapid-diagnostic" className="btn-outline">Request a rapid diagnostic</Link>
+          <Link to="/contact?interest=flagship-initiative" className="btn-outline">Discuss a flagship initiative</Link>
         </div>
       </div>
     </section>

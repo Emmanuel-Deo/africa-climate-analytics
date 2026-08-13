@@ -1,11 +1,13 @@
 .vision-mission {
-  padding: 6rem 80px;
+  padding: 6rem 0;
+  width: 100%;
   background-color: #f5f7f9;
 }
 
 .vm-container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 80px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
@@ -41,7 +43,7 @@
 .vm-title {
   font-size: 1.75rem;
   font-weight: 700;
-  color: #1e2d3d;
+  color: #16191C;
   margin-bottom: 1.5rem;
 }
 
@@ -54,12 +56,17 @@
 @media (max-width: 1024px) {
   .vm-container {
     grid-template-columns: 1fr;
+    padding: 0 40px;
   }
 }
 
 @media (max-width: 640px) {
   .vision-mission {
-    padding: 4rem 1.5rem;
+    padding: 4rem 0;
+  }
+
+  .vm-container {
+    padding: 0 1.5rem;
   }
 
   .vm-card {

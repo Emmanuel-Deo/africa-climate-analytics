@@ -3,17 +3,27 @@
   min-height: calc(100vh - 80px);
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 3rem 80px;
   background-color: #f5f7f9;
-  max-width: 1600px;
-  margin: 0 auto;
   width: 100%;
-  gap: 3rem;
 }
 
-.hero-content {
-  max-width: 520px;
+.hero-inner {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 3rem max(80px, calc((100% - 1440px) / 2));
+  display: grid;
+  grid-template-columns: 480px 1fr;
+  grid-template-areas:
+    "text map"
+    "details map";
+  align-items: center;
+  column-gap: clamp(2rem, 4vw, 4rem);
+  row-gap: 0.5rem;
+}
+
+.hero-text {
+  grid-area: text;
   z-index: 1;
   text-align: left;
 }
@@ -22,16 +32,21 @@
   font-size: 3.75rem;
   font-weight: 700;
   line-height: 1.1;
-  margin-bottom: 1.25rem;
 }
 
-.text-navy { color: #1e2d3d; }
-.text-orange { color: #bc6c47; }
-.text-green { color: #5a8266; }
+.text-navy { color: #16191C; }
+.text-orange { color: #C68E1A; }
+.text-green { color: #4C8C2E; }
+
+.hero-details {
+  grid-area: details;
+  z-index: 1;
+  text-align: left;
+}
 
 .hero-description {
   font-size: 1.25rem;
-  color: #2d4f6b;
+  color: #0B5E39;
   opacity: 0.8;
   line-height: 1.6;
   margin-bottom: 1.5rem;
@@ -40,47 +55,49 @@
 
 .hero-buttons {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
-  margin-bottom: 2rem;
 }
 
 .hero-btn-primary {
-  padding: 0.875rem 1.75rem;
+  padding: 1rem 2rem;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   color: #fff;
-  background: linear-gradient(135deg, #5a8f6a 0%, #2d4f6b 100%);
+  background: #0B5E39;
   border: none;
-  border-radius: 8px;
+  border-radius: 100px;
   cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 10px 20px rgba(11, 94, 57, 0.22);
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .hero-btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(90, 143, 106, 0.3);
+  box-shadow: 0 12px 24px rgba(11, 94, 57, 0.3);
 }
 
 .hero-btn-secondary {
-  padding: 0.875rem 1.75rem;
+  padding: 1rem 2rem;
   font-size: 1rem;
-  font-weight: 600;
-  color: #2d4f6b;
+  font-weight: 700;
+  color: #16191C;
   background: transparent;
-  border: 2px solid #2d4f6b;
-  border-radius: 8px;
+  border: 1.5px solid #16191C;
+  border-radius: 100px;
   cursor: pointer;
+  white-space: nowrap;
   transition: background 0.2s, color 0.2s;
 }
 
 .hero-btn-secondary:hover {
-  background: #2d4f6b;
+  background: #16191C;
   color: #fff;
 }
 
-.hero-stats {
-  display: flex;
-  gap: 2.5rem;
+.hero-stats-mobile {
+  display: none;
 }
 
 .hero-stat-item {
@@ -91,27 +108,28 @@
 .hero-stat-number {
   font-size: 1.75rem;
   font-weight: 700;
-  color: #2d4f6b;
+  color: #0B5E39;
 }
 
 .hero-stat-label {
   font-size: 0.875rem;
-  color: #2d4f6b;
+  color: #0B5E39;
   opacity: 0.7;
 }
 
 .hero-map {
-  flex: 1;
+  grid-area: map;
+  position: relative;
+  width: 100%;
+  height: 560px;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  position: relative;
 }
 
 .hero-map-image {
   width: 100%;
-  max-width: 520px;
+  max-width: 460px;
   height: auto;
   filter: drop-shadow(0 10px 20px rgba(0,0,0,0.05));
 }
@@ -122,8 +140,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 580px;
-  height: 580px;
+  width: 520px;
+  height: 520px;
   border: 1.8px dashed #c4c4c4;
   border-radius: 50%;
   animation: rotate-clockwise 60s linear infinite;
@@ -139,19 +157,138 @@
   }
 }
 
-@media (max-width: 1024px) {
-  .hero {
-    flex-direction: column-reverse;
-    justify-content: center;
-    text-align: center;
-    padding: 3rem 40px;
-    gap: 2rem;
+/* Orbit stat cards */
+.hero-orbit-card {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.orbit-card-value {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: #16191C;
+  line-height: 1;
+}
+
+.orbit-card-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #364356;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-top: 0.4rem;
+}
+
+.orbit-card-sub {
+  font-size: 0.78rem;
+  color: #8a97a8;
+  margin-top: 0.15rem;
+}
+
+.hero-orbit-card.orbit-top-left {
+  top: 17%;
+  left: 9%;
+  text-align: left;
+}
+
+.hero-orbit-card.orbit-top-right {
+  top: 10%;
+  right: 7%;
+  text-align: right;
+  align-items: flex-end;
+}
+
+.hero-orbit-card.orbit-bottom-left {
+  bottom: 15%;
+  left: 7%;
+  text-align: left;
+}
+
+.hero-orbit-card.orbit-bottom-right {
+  bottom: 13%;
+  right: 9%;
+  text-align: right;
+  align-items: flex-end;
+}
+
+/* Orbit pillar tags */
+.hero-orbit-tag {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #ffffff;
+  border: 1px solid #e8edf5;
+  border-radius: 100px;
+  padding: 0.5rem 1rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #364356;
+  white-space: nowrap;
+  box-shadow: 0 4px 14px rgba(30, 45, 61, 0.06);
+  z-index: 2;
+}
+
+.orbit-tag-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.orbit-tag-dot.dot-orange { background-color: #C68E1A; }
+.orbit-tag-dot.dot-green { background-color: #4C8C2E; }
+.orbit-tag-dot.dot-navy { background-color: #16191C; }
+
+.hero-orbit-tag.orbit-top {
+  top: -3%;
+  left: 30%;
+}
+
+.hero-orbit-tag.orbit-right {
+  top: 48%;
+  right: -7%;
+  transform: translateY(-50%);
+}
+
+.hero-orbit-tag.orbit-bottom {
+  bottom: -3%;
+  left: 38%;
+}
+
+.hero-orbit-tag.orbit-left {
+  top: 55%;
+  left: -7%;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 1240px) {
+  .hero-inner {
+    grid-template-columns: 420px 1fr;
   }
 
-  .hero-content {
+  .hero-map {
+    height: 480px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "text"
+      "map"
+      "details";
+    padding: 3rem 40px;
+    row-gap: 1.5rem;
     text-align: center;
-    width: 100%;
-    max-width: 100%;
+  }
+
+  .hero-text,
+  .hero-details {
+    text-align: center;
   }
 
   .hero-title {
@@ -167,13 +304,17 @@
     justify-content: center;
   }
 
-  .hero-stats {
+  .hero-stats-mobile {
+    display: flex;
     justify-content: center;
+    gap: 2.5rem;
+    margin-top: 2rem;
   }
 
   .hero-map {
     width: 100%;
-    margin-bottom: 1rem;
+    height: auto;
+    min-height: 340px;
   }
 
   .hero-map-image {
@@ -184,10 +325,15 @@
     width: 320px;
     height: 320px;
   }
+
+  .hero-orbit-card,
+  .hero-orbit-tag {
+    display: none;
+  }
 }
 
 @media (max-width: 640px) {
-  .hero {
+  .hero-inner {
     padding: 2rem 1.5rem;
   }
 
@@ -210,10 +356,9 @@
     width: 100%;
   }
 
-  .hero-stats {
+  .hero-stats-mobile {
     flex-wrap: wrap;
     gap: 1.5rem;
-    justify-content: center;
   }
 
   .hero-stat-item {

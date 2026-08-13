@@ -1,24 +1,29 @@
 .pillars-section {
-  background-color: #f8fafc;
-  padding: 6rem 80px;
-  max-width: 1600px;
+  position: relative;
+  width: 100%;
+  background-image:
+    /* radial-gradient(ellipse 500px 300px at 8% 0%, rgba(120, 190, 160, 0.35), transparent 60%), */
+    /* linear-gradient(180deg, rgba(255, 255, 255, 0.72) 0%, rgba(240, 246, 248, 0.85) 100%), */
+    url('../assets/pillars-background.png');
+  background-size: cover, cover, cover;
+  background-position: center, center, center top;
+  background-repeat: no-repeat;
+}
+
+.pillars-inner {
+  max-width: 1760px;
   margin: 0 auto;
+  padding: 6rem 5rem;
 }
 
 .pillars-header {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  flex-direction: column;
   margin-bottom: 4rem;
 }
 
-.header-left {
-  display: flex;
-  flex-direction: column;
-}
-
 .label {
-  color: #bc6c47;
+  color: #C68E1A;
   font-weight: 700;
   font-size: 0.9rem;
   letter-spacing: 0.1em;
@@ -32,117 +37,79 @@
   display: inline-block;
   width: 30px;
   height: 2px;
-  background-color: #bc6c47;
+  background-color: #C68E1A;
 }
 
 .section-title {
-  font-size: 3.5rem;
-  color: #1e2d3d;
+  font-size: 2.75rem;
+  color: #16191C;
   font-weight: 800;
-  max-width: 600px;
-  line-height: 1.1;
+  max-width: 580px;
+  line-height: 1.2;
 }
 
-.view-all-btn {
-  display: inline-block;
-  background: white;
-  border: 1px solid #e2e8f0;
-  padding: 0.8rem 1.5rem;
-  border-radius: 12px;
-  color: #64748b;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.2s;
-}
-
-.view-all-btn:hover {
-  background: #f1f5f9;
-}
-
-.pillars-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
-
-.pillar-card {
-  background: #ffffff;
-  padding: 2.5rem 2rem;
-  border-radius: 24px;
+.pillars-flow {
   display: flex;
-  flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-}
-
-.pillar-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
-}
-
-.icon-wrapper {
-  width: 50px;
-  height: 50px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 2rem;
+  row-gap: 3rem;
+  column-gap: 2.5rem;
 }
 
-.icon-wrapper.blue { background-color: #eef2ff; color: #4338ca; }
-.icon-wrapper.orange { background-color: #fff7ed; color: #9a3412; }
-.icon-wrapper.green { background-color: #f0fdf4; color: #166534; }
-.icon-wrapper.navy { background-color: #f1f5f9; color: #1e2d3d; }
+.pillar-item {
+  flex: 0 1 calc(25% - 1.875rem);
+  text-decoration: none;
+  color: inherit;
+}
 
 .pillar-title {
-  font-size: 1.25rem;
-  color: #1e2d3d;
+  font-size: 1.15rem;
+  color: #0B5E39;
   font-weight: 700;
-  line-height: 1.4;
-  margin-bottom: 1.5rem;
+  line-height: 1.35;
+  margin-bottom: 1rem;
+  transition: color 0.2s ease;
+}
+
+.pillar-item:hover .pillar-title {
+  color: #16191C;
+  text-decoration: underline;
 }
 
 .pillar-desc {
-  font-size: 1.05rem;
-  color: #64748b;
+  font-size: 0.95rem;
+  color: #3d4a56;
   line-height: 1.6;
-  margin-bottom: 1rem;
-  flex-grow: 1;
+  margin-bottom: 0.85rem;
 }
 
 .pillar-details {
-  font-size: 0.9rem;
-  color: #94a3b8;
-  line-height: 1.5;
+  font-size: 0.88rem;
+  color: #5c6773;
+  line-height: 1.55;
 }
 
 @media (max-width: 1024px) {
-  .pillars-section {
-    padding: 4rem 40px;
+  .pillars-inner {
+    padding: 4rem 2.5rem;
   }
 
-  .pillars-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.5rem;
-  }
-  
   .section-title {
     font-size: 2.5rem;
   }
 
-  .view-all-btn {
-    display: none;
+  .pillars-flow {
+    justify-content: flex-start;
   }
 
-  .pillars-grid {
-    grid-template-columns: repeat(3, 1fr);
+  .pillar-item {
+    flex: 1 1 45%;
+    max-width: 100%;
   }
 }
 
 @media (max-width: 640px) {
-  .pillars-section {
+  .pillars-inner {
     padding: 3rem 1.5rem;
   }
 
@@ -150,11 +117,11 @@
     font-size: 2rem;
   }
 
-  .pillars-grid {
-    grid-template-columns: 1fr;
+  .pillars-flow {
+    row-gap: 2rem;
   }
 
-  .pillar-card {
-    padding: 2rem 1.5rem;
+  .pillar-item {
+    flex: 1 1 100%;
   }
 }

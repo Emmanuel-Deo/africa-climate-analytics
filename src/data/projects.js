@@ -11,6 +11,9 @@ const projects = [
     title: "Continental Study on Human Mobility in the Context of Climate Change in Africa",
     client: "African Union Commission and International Organization for Migration (IOM)",
     coverage: "Continental scope across all five African sub-regions",
+    themes: ["climate-mobility"],
+    region: "continental",
+    disclosurePermitted: true,
     description: "Comprehensive synthesis of climate-related migration, displacement, planned relocation and immobility across all five African sub-regions. Provided AU and IOM with an authoritative reference now used to inform continental strategies.",
     objective: "To generate a comprehensive, policy-relevant synthesis of how climate change, environmental degradation and disasters are shaping human mobility across Africa, and how these dynamics are reflected in AU, REC and national policy and institutional frameworks.",
     contribution: [
@@ -31,6 +34,9 @@ const projects = [
     title: "Climate-Mobility Action Plan and Roadmap 2026–2027 for IOM Climate Action Division at the African Union",
     client: "IOM Special Liaison Office to the African Union and UNECA (Climate Action Division)",
     coverage: "Working with the African Union Commission and Regional Economic Communities",
+    themes: ["climate-mobility"],
+    region: "continental",
+    disclosurePermitted: true,
     description: "Strategic two-year action plan grounding IOM's support to AU, RECs and Member States on climate-mobility. Created practical reference for internal planning and resource mobilisation.",
     objective: "To translate continental evidence and political commitments on climate-related human mobility into a focused 2026–2027 action plan and roadmap that positions IOM's Climate Action Division as a leading technical partner to the AU, RECs and Member States.",
     contribution: [
@@ -51,6 +57,9 @@ const projects = [
     title: "AU–IOM–Team Europe Global Gateway Flagship on Urban and Coastal Climate Resilience in Mobility Hotspots",
     client: "African Union Commission and IOM, in partnership with the European Union and Team Europe development finance institutions",
     coverage: "Focus on African urban and coastal mobility hotspots",
+    themes: ["climate-finance-investment", "climate-mobility"],
+    region: "coastal-urban-hotspots",
+    disclosurePermitted: true,
     description: "Flagship concept linking climate-resilient urban and coastal investments with technical assistance on climate-mobility. Positioned AU and IOM with investment-grade flagship for Global Gateway framework.",
     objective: "To design a Global Gateway flagship proposal that links climate-resilient urban and coastal investments in African mobility hotspots with an AU-anchored, IOM-supported technical assistance facility on climate-related mobility, aligned with African and EU priorities.",
     contribution: [
@@ -71,6 +80,9 @@ const projects = [
     title: "Comprehensive Study on Climate Adaptation Interventions and Locally Led Adaptation in Africa",
     client: "Global Health Strategies (GHS) and African Union Commission (SEBE Directorate)",
     coverage: "Africa-wide scope with regional and country case studies",
+    themes: ["adaptation-locally-led"],
+    region: "continental",
+    disclosurePermitted: true,
     description: "Mixed-methods analysis of scalable adaptation models and financing pathways for AU positioning under Agenda 2063 and Global Goal on Adaptation. Equipped AU with evidence base for global adaptation debates.",
     objective: "To map and analyze climate adaptation interventions across Africa, with a focus on scalable, inclusive and locally led adaptation models, financing pathways and indicators to inform AU-level positioning under the AU Climate Strategy, Agenda 2063 and the Global Goal on Adaptation.",
     contribution: [

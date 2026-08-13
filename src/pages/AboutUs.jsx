@@ -1,11 +1,10 @@
 import AboutHero from '../components/AboutHero'
 import VisionMission from '../components/VisionMission'
 import ValueProposition from '../components/ValueProposition'
-import SolutionSuites from '../components/SolutionSuites'
-import CoreValues from '../components/CoreValues'
-import Methodology from '../components/Methodology'
-import TeamPartnerships from '../components/TeamPartnerships'
-import ToolsTech from '../components/ToolsTech'
+import WhyUs from '../components/WhyUs'
+import PrinciplesValues from '../components/PrinciplesValues'
+import GeographicFocus from '../components/GeographicFocus'
+import PageCTA from '../components/PageCTA'
 
 function AboutUs() {
   return (
@@ -13,11 +12,18 @@ function AboutUs() {
       <AboutHero />
       <VisionMission />
       <ValueProposition />
-      <SolutionSuites />
-      <CoreValues />
-      <Methodology />
-      <TeamPartnerships />
-      <ToolsTech />
+      <WhyUs />
+      <PrinciplesValues />
+      <GeographicFocus />
+      <PageCTA
+        title="Get to know Africa Climate Analytics"
+        description="Meet our team and governance, explore our approach, or review our data governance and research ethics commitments."
+        buttons={[
+          { label: "Meet our team", to: "/team-governance" },
+          { label: "Explore our approach", to: "/what-we-do#our-approach" },
+          { label: "Work with ACA", to: "/contact" }
+        ]}
+      />
     </>
   )
 }

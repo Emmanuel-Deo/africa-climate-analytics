@@ -3,8 +3,10 @@ import landscapeImg from '../assets/Africa landscape.jpg'
 
 function AboutHero() {
   return (
-    <section className="about-hero">
-      <div className="about-hero-inner">
+    <section
+      className="about-hero"
+      style={{ backgroundImage: `url(${landscapeImg})` }}
+    >
       <div className="about-hero-content">
         <h1 className="about-hero-title">
           About Africa Climate Analytics
@@ -17,30 +19,9 @@ function AboutHero() {
           decision-ready insights for African public institutions, regional bodies,
           civil-society organisations and selected private-sector actors.
         </p>
+      </div>
 
-        <div className="about-hero-details">
-          <div className="detail-item">
-            <span className="detail-label">Legal Form</span>
-            <span className="detail-value">Company limited by guarantee (not-for-profit)</span>
-          </div>
-          <div className="detail-item">
-            <span className="detail-label">Incorporation</span>
-            <span className="detail-value">Incorporated in Kenya under the Companies Act</span>
-          </div>
-        </div>
-      </div>
-      <div className="about-hero-image">
-        <figure className="about-hero-figure">
-          <img
-            src={landscapeImg}
-            alt="A herd of elephants at a watering hole with Mount Kenya in the background, Laikipia"
-          />
-          <figcaption>
-            Laikipia, Kenya &mdash; Photo by Leon Pauleikhoff
-          </figcaption>
-        </figure>
-      </div>
-      </div>
+      <span className="about-hero-credit">Laikipia, Kenya &mdash; Photo by Leon Pauleikhoff</span>
     </section>
   )
 }

@@ -72,7 +72,7 @@ function TermsOfUse() {
           <h2>Contact us</h2>
           <p className="policy-text">
             For questions about these terms, contact us at{' '}
-            <a href="mailto:partnerships@africaclimateanalytics.org">partnerships@africaclimateanalytics.org</a>.
+            <a href="mailto:info@africaclimateanalytics.org">info@africaclimateanalytics.org</a>.
           </p>
         </section>
 

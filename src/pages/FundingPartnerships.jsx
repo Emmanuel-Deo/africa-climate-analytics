@@ -18,7 +18,7 @@ function FundingPartnerships() {
       <PartnershipEthosSafeguards />
       <PageCTA
         title="Partner with us to strengthen climate intelligence for Africa"
-        description="Share a brief description of your priorities and how you would like to work with ACA, and we will follow up to explore tailored partnership options. Prefer email? Write to us at partnerships@africaclimateanalytics.org."
+        description="Share a brief description of your priorities and how you would like to work with ACA, and we will follow up to explore tailored partnership options. Prefer email? Write to us at info@africaclimateanalytics.org."
         buttons={[
           { label: "Send partnership enquiry", to: "/contact?interest=partnership" },
           { label: "Commission high-value consulting", to: "/contact?interest=consulting" }

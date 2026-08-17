@@ -15,8 +15,8 @@ function Footer() {
             data and evidence into resilient policies, investments and programmes.
           </p>
           <p className="location-tag">Nairobi, Kenya</p>
-          <a href="mailto:partnerships@africaclimateanalytics.org" className="footer-email">
-            partnerships@africaclimateanalytics.org
+          <a href="mailto:info@africaclimateanalytics.org" className="footer-email">
+            info@africaclimateanalytics.org
           </a>
         </div>
 
@@ -48,7 +48,6 @@ function Footer() {
           <div className="footer-col">
             <h4>Connect</h4>
             <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="mailto:info@africaclimateanalytics.org">info@africaclimateanalytics.org</a>
           </div>
         </div>
       </div>

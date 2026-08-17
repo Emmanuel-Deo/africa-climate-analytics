@@ -48,7 +48,7 @@ function Footer() {
           <div className="footer-col">
             <h4>Connect</h4>
             <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="mailto:privacy@africaclimateanalytics.org">privacy@africaclimateanalytics.org</a>
+            <a href="mailto:info@africaclimateanalytics.org">info@africaclimateanalytics.org</a>
           </div>
         </div>
       </div>

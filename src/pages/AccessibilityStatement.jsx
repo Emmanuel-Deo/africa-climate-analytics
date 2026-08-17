@@ -47,7 +47,7 @@ function AccessibilityStatement() {
           <p className="policy-text">
             We welcome feedback on the accessibility of this website. Please contact
             us at{' '}
-            <a href="mailto:privacy@africaclimateanalytics.org">privacy@africaclimateanalytics.org</a>{' '}
+            <a href="mailto:info@africaclimateanalytics.org">info@africaclimateanalytics.org</a>{' '}
             if you have difficulty accessing any part of this site or wish to report
             an accessibility issue.
           </p>

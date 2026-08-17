@@ -62,7 +62,7 @@ function WebsitePrivacyCookieNotice() {
           <p className="policy-text">
             You may ask us to access, correct or delete the personal information we
             hold about you, or to explain how it is used, by writing to us at{' '}
-            <a href="mailto:privacy@africaclimateanalytics.org">privacy@africaclimateanalytics.org</a>.
+            <a href="mailto:info@africaclimateanalytics.org">info@africaclimateanalytics.org</a>.
             We will respond to reasonable requests within a reasonable time.
           </p>
         </section>
@@ -90,7 +90,7 @@ function WebsitePrivacyCookieNotice() {
           <h2>Contact us</h2>
           <p className="policy-text">
             For any questions about this notice or how we handle your data, contact
-            us at <a href="mailto:privacy@africaclimateanalytics.org">privacy@africaclimateanalytics.org</a>.
+            us at <a href="mailto:info@africaclimateanalytics.org">info@africaclimateanalytics.org</a>.
           </p>
         </section>
 

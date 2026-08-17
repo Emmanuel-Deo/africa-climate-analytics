@@ -1,0 +1,121 @@
+.team-member-detail {
+  padding: 3rem 0 5rem;
+  min-height: 80vh;
+}
+
+.tm-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.tm-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #4a5568;
+  text-decoration: none;
+  font-weight: 500;
+  margin-bottom: 2.5rem;
+  transition: color 0.2s;
+}
+
+.tm-back:hover {
+  color: #0B5E39;
+}
+
+.tm-back span {
+  font-size: 1.2rem;
+}
+
+.tm-header {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  margin-bottom: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid #e8edf5;
+}
+
+.tm-photo {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.tm-avatar {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0B5E39;
+  color: #ffffff;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.tm-name {
+  font-size: 2rem;
+  color: #16191C;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.tm-role {
+  font-size: 1.05rem;
+  color: #C68E1A;
+  font-weight: 600;
+}
+
+.tm-bio {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.tm-bio p {
+  color: #4a5568;
+  line-height: 1.75;
+  font-size: 1.05rem;
+}
+
+.tm-not-found {
+  text-align: center;
+  padding: 5rem 1.5rem;
+}
+
+.tm-back-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: #0B5E39;
+  color: white;
+  text-decoration: none;
+  border-radius: 100px;
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .tm-header {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 1.25rem;
+  }
+
+  .tm-photo,
+  .tm-avatar {
+    width: 96px;
+    height: 96px;
+  }
+
+  .tm-name {
+    font-size: 1.6rem;
+  }
+}

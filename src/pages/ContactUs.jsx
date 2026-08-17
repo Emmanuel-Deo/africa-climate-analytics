@@ -84,7 +84,7 @@ function ContactUs() {
           <div className="info-card">
             <h3>Email</h3>
             <p>partnerships@africaclimateanalytics.org</p>
-            <p>privacy@africaclimateanalytics.org (privacy &amp; data-protection enquiries)</p>
+            <p>info@africaclimateanalytics.org (privacy &amp; data-protection enquiries)</p>
           </div>
 
           <div className="info-card">

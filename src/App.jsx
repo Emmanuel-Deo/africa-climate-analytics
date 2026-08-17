@@ -8,6 +8,7 @@ import ProjectDetail from './pages/ProjectDetail'
 import FundingPartnerships from './pages/FundingPartnerships'
 import Insights from './pages/Insights'
 import TeamGovernance from './pages/TeamGovernance'
+import TeamMemberDetail from './pages/TeamMemberDetail'
 import ContactUs from './pages/ContactUs'
 import DataGovernance from './pages/DataGovernance'
 import WebsitePrivacyCookieNotice from './pages/WebsitePrivacyCookieNotice'
@@ -34,6 +35,7 @@ function App() {
         <Route path="/funding-partnerships" element={<FundingPartnerships />} />
         <Route path="/insights" element={<Insights />} />
         <Route path="/team-governance" element={<TeamGovernance />} />
+        <Route path="/team-governance/:id" element={<TeamMemberDetail />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/website-privacy-cookie-notice" element={<WebsitePrivacyCookieNotice />} />
         <Route path="/accessibility" element={<AccessibilityStatement />} />

@@ -109,7 +109,7 @@ function DataGovernance() {
           <p className="policy-text">
             If you have questions about how we handle data, wish to exercise data
             rights, or want to raise a concern, please contact us at{' '}
-            <a href="mailto:privacy@africaclimateanalytics.org">privacy@africaclimateanalytics.org</a>.
+            <a href="mailto:info@africaclimateanalytics.org">info@africaclimateanalytics.org</a>.
           </p>
         </section>
 

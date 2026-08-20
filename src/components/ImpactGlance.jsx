@@ -10,8 +10,8 @@ function ImpactGlance() {
     <section className="impact-glance">
       <div className="ig-container">
         <div className="ig-item">
-          <span className="ig-number">54+</span>
-          <span className="ig-label">Countries under our Africa-wide mandate</span>
+          <span className="ig-number">55</span>
+          <span className="ig-label">African Union (AU) Member States under our mandate</span>
         </div>
         <div className="ig-item">
           <span className="ig-number">5</span>

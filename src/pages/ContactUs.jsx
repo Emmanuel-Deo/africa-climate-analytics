@@ -26,6 +26,9 @@ const audienceToRepresent = {
   finance: "Financial institution / private-sector actor"
 }
 
+const CONTACT_API_URL =
+  import.meta.env.VITE_CONTACT_API_URL || "https://africaclimateanalytics.org/send-email.php"
+
 const interestToCheckbox = {
   "rapid-diagnostic": "Consulting / embedded advisory",
   "flagship-initiative": "Programme or technical facility",
@@ -44,7 +47,10 @@ function ContactUs() {
 
   const [represent, setRepresent] = useState(preselectedRepresent)
   const [interests, setInterests] = useState(preselectedInterest ? [preselectedInterest] : [])
+  const [fields, setFields] = useState({ organisation: '', name: '', email: '', phone: '', message: '' })
   const [submitted, setSubmitted] = useState(false)
+  const [status, setStatus] = useState('idle') // idle | sending | error
+  const [errorMessage, setErrorMessage] = useState('')
 
   function toggleInterest(option) {
     setInterests((prev) =>
@@ -52,9 +58,47 @@ function ContactUs() {
     )
   }
 
-  function handleSubmit(e) {
+  function handleFieldChange(e) {
+    const { id, value } = e.target
+    setFields((prev) => ({ ...prev, [id]: value }))
+  }
+
+  async function handleSubmit(e) {
     e.preventDefault()
-    setSubmitted(true)
+    setStatus('sending')
+    setErrorMessage('')
+
+    try {
+      const response = await fetch(CONTACT_API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ represent, interests, ...fields })
+      })
+
+      const rawBody = await response.text()
+      let data = {}
+      if (rawBody) {
+        try {
+          data = JSON.parse(rawBody)
+        } catch {
+          throw new Error(`Server returned an unexpected response (status ${response.status}).`)
+        }
+      }
+
+      if (!response.ok || data.status !== 'success') {
+        throw new Error(data.message || `Something went wrong (status ${response.status}). Please try again.`)
+      }
+
+      setStatus('idle')
+      setSubmitted(true)
+    } catch (err) {
+      setStatus('error')
+      setErrorMessage(
+        err instanceof TypeError
+          ? 'Could not reach the server. Please check your connection and try again.'
+          : err.message
+      )
+    }
   }
 
   return (
@@ -138,29 +182,63 @@ function ContactUs() {
               </div>
 
               <div className="form-group">
-                <label htmlFor="org">Organisation name</label>
-                <input id="org" type="text" required placeholder="Enter organisation name" />
+                <label htmlFor="organisation">Organisation name</label>
+                <input
+                  id="organisation"
+                  type="text"
+                  required
+                  placeholder="Enter organisation name"
+                  value={fields.organisation}
+                  onChange={handleFieldChange}
+                />
               </div>
 
               <div className="form-row">
                 <div className="form-group">
                   <label htmlFor="name">Full name</label>
-                  <input id="name" type="text" required placeholder="Enter your full name" />
+                  <input
+                    id="name"
+                    type="text"
+                    required
+                    placeholder="Enter your full name"
+                    value={fields.name}
+                    onChange={handleFieldChange}
+                  />
                 </div>
                 <div className="form-group">
                   <label htmlFor="email">Email</label>
-                  <input id="email" type="email" required placeholder="Enter your email" />
+                  <input
+                    id="email"
+                    type="email"
+                    required
+                    placeholder="Enter your email"
+                    value={fields.email}
+                    onChange={handleFieldChange}
+                  />
                 </div>
               </div>
 
               <div className="form-group">
                 <label htmlFor="phone">Phone number (optional)</label>
-                <input id="phone" type="tel" placeholder="Enter your phone number" />
+                <input
+                  id="phone"
+                  type="tel"
+                  placeholder="Enter your phone number"
+                  value={fields.phone}
+                  onChange={handleFieldChange}
+                />
               </div>
 
               <div className="form-group">
                 <label htmlFor="message">Message</label>
-                <textarea id="message" required placeholder="How can we help you?" rows="5"></textarea>
+                <textarea
+                  id="message"
+                  required
+                  placeholder="How can we help you?"
+                  rows="5"
+                  value={fields.message}
+                  onChange={handleFieldChange}
+                ></textarea>
               </div>
 
               <p className="form-privacy-notice">
@@ -170,7 +248,13 @@ function ContactUs() {
                 <a href="/website-privacy-cookie-notice">Website Privacy &amp; Cookie Notice</a>.
               </p>
 
-              <button type="submit" className="submit-btn">Send partnership enquiry</button>
+              {status === 'error' && (
+                <p className="form-error-notice">{errorMessage}</p>
+              )}
+
+              <button type="submit" className="submit-btn" disabled={status === 'sending'}>
+                {status === 'sending' ? 'Sending…' : 'Send partnership enquiry'}
+              </button>
             </form>
           )}
         </div>

@@ -5,7 +5,7 @@ import heroMap from '../assets/heroMap.svg'
 const orbitStats = [
   { value: '5', label: 'AU Sub-Regions', sub: 'All covered', position: 'top-left' },
   { value: '12+', label: 'Assignments', sub: 'Successfully completed', position: 'top-right' },
-  { value: '54', label: 'African Countries', sub: 'Continental coverage', position: 'bottom-left' },
+  { value: '55', label: 'AU Member States', sub: 'Continental coverage', position: 'bottom-left' },
   { value: '7', label: 'Service Pillars', sub: 'Climate action support', position: 'bottom-right' }
 ]
 

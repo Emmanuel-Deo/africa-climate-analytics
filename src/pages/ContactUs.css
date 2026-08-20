@@ -180,6 +180,16 @@
   line-height: 1.6;
 }
 
+.form-error-notice {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  padding: 0.875rem 1rem;
+  color: #b91c1c;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
 .submit-btn {
   padding: 1rem 2.25rem;
   font-size: 1.05rem;
@@ -197,6 +207,12 @@
 .submit-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 12px 24px rgba(11, 94, 57, 0.3);
+}
+
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
 }
 
 @media (max-width: 1024px) {

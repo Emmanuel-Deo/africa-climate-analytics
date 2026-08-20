@@ -120,12 +120,12 @@ const pillars = [
 function PillarsDetailed() {
   return (
     <section className="pillars-detailed">
-      <div className="pd-header">
-        <div className="pd-label">
-          <span className="pd-line"></span> OUR SEVEN SERVICE PILLARS
+      <div className="pdt-header">
+        <div className="pdt-label">
+          <span className="pdt-line"></span> OUR SEVEN SERVICE PILLARS
         </div>
-        <h2 className="pd-title">A value chain from risk to results</h2>
-        <p className="pd-subtitle">
+        <h2 className="pdt-title">A value chain from risk to results</h2>
+        <p className="pdt-subtitle">
           Together, these pillars enable our partners to understand climate risks and
           resilience gaps, integrate evidence into policies and plans, build usable
           data and decision tools, mobilise and target climate finance, track and
@@ -134,22 +134,22 @@ function PillarsDetailed() {
         </p>
       </div>
 
-      <div className="pd-list">
+      <div className="pdt-list">
         {pillars.map((pillar) => (
-          <div key={pillar.anchor} id={pillar.anchor} className="pd-card">
-            <div className="pd-card-top">
-              <div className={`pd-icon ${pillar.color}`}>{pillar.icon}</div>
-              <span className="pd-number">{pillar.number}</span>
+          <div key={pillar.anchor} id={pillar.anchor} className="pdt-card">
+            <div className="pdt-card-top">
+              <div className={`pdt-icon ${pillar.color}`}>{pillar.icon}</div>
+              <span className="pdt-number">{pillar.number}</span>
             </div>
-            <h3 className="pd-card-title">{pillar.title}</h3>
-            <p className="pd-intro">{pillar.intro}</p>
-            <p className="pd-services-label">Typical services include:</p>
-            <ul className="pd-services">
+            <h3 className="pdt-card-title">{pillar.title}</h3>
+            <p className="pdt-intro">{pillar.intro}</p>
+            <p className="pdt-services-label">Typical services include:</p>
+            <ul className="pdt-services">
               {pillar.services.map((s) => (
                 <li key={s}>{s}</li>
               ))}
             </ul>
-            <p className="pd-closing">{pillar.closing}</p>
+            <p className="pdt-closing">{pillar.closing}</p>
           </div>
         ))}
       </div>
